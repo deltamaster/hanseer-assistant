@@ -24,7 +24,6 @@ jobs:
           node-version: '22.x'
 
       - name: npm install, build, and test
-        working-directory: personal-assistant
         run: |
           npm install --legacy-peer-deps
           npm run build --if-present
@@ -34,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: personal-assistant
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
