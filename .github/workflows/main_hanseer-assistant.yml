@@ -61,5 +61,5 @@ jobs:
         with:
           app-name: 'hanseer-assistant'
           slot-name: 'Production'
-          package: personal-assistant
+          package: .
           
