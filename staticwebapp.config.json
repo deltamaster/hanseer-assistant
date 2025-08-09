@@ -1,0 +1,30 @@
+{
+  "routes": [
+    {
+      "route": "/*",
+      "serve": "/.next/static/$1",
+      "statusCode": 200
+    },
+    {
+      "route": "/_next/*",
+      "serve": "/.next/$1",
+      "statusCode": 200
+    },
+    {
+      "route": "/*",
+      "serve": "/.next/server/pages/$1",
+      "statusCode": 200
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "responseOverrides": {
+    "401": {
+      "rewrite": "/"
+    },
+    "404": {
+      "rewrite": "/"
+    }
+  }
+}
